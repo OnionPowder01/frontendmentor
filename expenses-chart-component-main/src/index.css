@@ -1,0 +1,118 @@
+:root {
+  /*  Primary */
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  /* Neutral */
+
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --veryPaleOrange: hsl(33, 100%, 98%);
+
+  --fontDM: "DM Sans", sans-serif;
+  --fontRegular: 400;
+  --fontBold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  font-family: var(--fontDM);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  max-width: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 100%
+  n;
+  gap: 2rem;
+}
+
+/* DashboardHeader */
+.dashboard-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15rem;
+  padding: 2rem 1rem;
+  width: 30rem;
+  background: var(--softRed);
+  border-radius: 1.5rem;
+}
+
+.my-balance-container {
+  display: flex;
+  flex-direction: column;
+  gap: rem;
+}
+
+.my-balance-container h1,
+p {
+  color: var(--cream);
+}
+
+.my-balance-container h1 {
+  margin-top: 0.5rem;
+}
+
+.logo-container {
+  width: 100%;
+}
+/* ----------- */
+
+.dashboard-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 30rem;
+  background: var(--veryPaleOrange);
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.dashboard-title h1 {
+  color: var(--darkBrown);
+  font-weight: var(--fontBold);
+  padding-inline: 1.5rem;
+}
+
+.chart-container {
+  display: flex;
+  padding-inline: 1rem;
+}
+
+.main-chart {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 1rem;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 2.8rem;
+  margin-bottom: 10px;
+}
+.chart-bar-fill {
+  background: var(--darkBrown);
+}
