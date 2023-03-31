@@ -18,6 +18,9 @@
 * {
   margin: 0;
   padding: 0;
+  /* outline: 1px solid red !important;
+  opacity: 1 !important;
+  visibility: visible !important; */
 }
 
 body {
@@ -35,16 +38,15 @@ main {
   min-height: 100vh;
   margin: auto;
   display: flex;
-  max-width: 100%;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
-  max-width: 100%
-  n;
-  gap: 2rem;
+  max-width: 95%;
+  gap: 1rem;
 }
 
 /* DashboardHeader */
@@ -56,13 +58,12 @@ main {
   padding: 2rem 1rem;
   width: 30rem;
   background: var(--softRed);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 
 .my-balance-container {
   display: flex;
   flex-direction: column;
-  gap: rem;
 }
 
 .my-balance-container h1,
@@ -85,22 +86,26 @@ p {
   gap: 1.5rem;
   width: 30rem;
   background: var(--veryPaleOrange);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   padding: 2rem 1rem;
 }
 
 .dashboard-title h1 {
   color: var(--darkBrown);
   font-weight: var(--fontBold);
-  padding-inline: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-inline: 1rem;
 }
 
 .chart-container {
+  max-width: 100%;
   display: flex;
   padding-inline: 1rem;
 }
 
 .main-chart {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -108,11 +113,110 @@ p {
 }
 
 .chart-bar-container {
+  max-width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  width: 2.8rem;
+  gap: 0.8rem;
   margin-bottom: 10px;
 }
 .chart-bar-fill {
-  background: var(--darkBrown);
+  background: var(--softRed);
+  border-radius: 0.2rem;
+  width: 3.1rem;
+}
+
+.chart-bar-container:nth-child(3) .chart-bar-fill {
+  background-color: var(--cyan);
+}
+
+.chart-bar-day {
+  margin: 0 auto;
+  font-weight: var(--fontRegular);
+  color: var(--mediumBrown);
+  font-size: 0.9rem;
+}
+
+.break {
+  width: 95%;
+  height: 0.2rem;
+  border-radius: 0.1rem;
+  background: var(--cream);
+  margin: 0 auto;
+}
+
+footer {
+  padding-inline: 0.5rem;
+  display: flex;
+  gap: 13.3rem;
+  margin-top: 0.5rem;
+}
+
+.footer-total-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.footer-total-container p {
+  color: var(--mediumBrown);
+}
+
+.footer-total-container h1 {
+  color: var(--darkBrown);
+  padding-inline: 0.2rem;
+  font-weight: var(--fontBold);
+}
+
+.footer-report-container h5 {
+  display: flex;
+  justify-content: end;
+  color: var(--darkBrown);
+  font-weight: var(--fontBold);
+}
+
+.footer-report-container {
+  margin-top: 1.5rem;
+}
+
+.footer-report-container p {
+  color: var(--mediumBrown);
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    gap: 0.8rem;
+  }
+
+  .dashboard-container {
+    padding: 1rem 1rem;
+    gap: 7.5rem;
+    width: 90%;
+  }
+
+  .dashboard-main-container {
+    gap: 1rem;
+    width: 90%;
+    background: var(--veryPaleOrange);
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .dashboard-title h1 {
+    font-size: 1.6rem;
+    padding-inline: 0.8rem;
+  }
+  .main-chart {
+    gap: 0.8rem;
+  }
+
+  .chart-bar-fill {
+    width: 1.95rem;
+  }
+  .break {
+    height: 0.1rem;
+  }
+
+  footer {
+    gap: 3.5rem;
+  }
 }
