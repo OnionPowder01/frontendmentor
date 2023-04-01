@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import ChartBar from "./ChartBar";
 import data from "../data.json";
 
-
 const Chart = () => {
-
-  const chartBars = data.map(item => (
-    <div className="chart-bar-container">
-      <div className="chart-bar-day">{item.day}</div>
-      <div className="chart-bar-fill" style={{ height: `${item.amount * 3}px` }}></div>  
-    </div>
-  ));
-  
+  data.map((item, idx) => <ChartBar item={item} key={idx} />);
 
   return (
     <div className="main-chart">
-     {chartBars}
+      {data.map((item, idx) => (
+        <ChartBar item={item} key={idx} />
+      ))}
     </div>
-  )
+  );
 };
 
 export default Chart;

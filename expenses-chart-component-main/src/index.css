@@ -118,9 +118,11 @@ p {
   flex-direction: column-reverse;
   gap: 0.8rem;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .chart-bar-fill {
   background: var(--softRed);
+  position: relative;
   border-radius: 0.2rem;
   width: 3.1rem;
 }
@@ -138,7 +140,7 @@ p {
 
 .break {
   width: 95%;
-  height: 0.2rem;
+  height: 0.12rem;
   border-radius: 0.1rem;
   background: var(--cream);
   margin: 0 auto;
@@ -147,7 +149,7 @@ p {
 footer {
   padding-inline: 0.5rem;
   display: flex;
-  gap: 13.3rem;
+  gap: 12.8rem;
   margin-top: 0.5rem;
 }
 
@@ -159,12 +161,18 @@ footer {
 
 .footer-total-container p {
   color: var(--mediumBrown);
+  font-size: 0.9rem;
+}
+
+.footer-report-container {
+  margin-top: 1.5rem;
 }
 
 .footer-total-container h1 {
   color: var(--darkBrown);
   padding-inline: 0.2rem;
   font-weight: var(--fontBold);
+  font-size: 2.3rem;
 }
 
 .footer-report-container h5 {
@@ -174,12 +182,23 @@ footer {
   font-weight: var(--fontBold);
 }
 
-.footer-report-container {
-  margin-top: 1.5rem;
-}
-
 .footer-report-container p {
   color: var(--mediumBrown);
+  font-size: 0.9rem;
+}
+
+.tooltip-container {
+  position: absolute;
+  bottom: 110%;
+  left: -10%;
+  padding: .4rem .6rem;
+  background: var(--darkBrown);
+  border-radius: .2rem;
+}
+
+.para p {
+  font-size: .9rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -217,6 +236,18 @@ footer {
   }
 
   footer {
-    gap: 3.5rem;
+    gap: 3rem;
+  }
+
+  .tooltip-container {
+    padding: .4rem;
+    left: -20%;
+    right: -20%;
+    background: var(--darkBrown);
+    border-radius: .2rem;
+  }
+
+  .para p {
+    font-size: .6rem;
   }
 }
