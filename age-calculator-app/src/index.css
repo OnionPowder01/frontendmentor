@@ -76,15 +76,9 @@ main {
   color: var(--smokeyGrey);
   font-size: 0.7rem;
 }
-
-/* input {
- border: .1rem solid var(--lightGrey);
-} */
-
-/* input:focus {
-  border: .1rem solid red;
-  outline: none;
-} */
+.label-error {
+  color: var(--lightRed);
+}
 
 .input-container input {
   background: none;
@@ -95,6 +89,9 @@ main {
   padding: 1rem;
   font-weight: var(--fw800);
   font-size: 1.7rem;
+}
+.error input {
+  border: 0.1rem solid var(--lightRed)!important;
 }
 
 .input-container input:focus {
@@ -159,6 +156,13 @@ main {
 .months-container span,
 .days-container span {
   color: var(--purple);
+}
+
+.para-error {
+  font-weight: var(--fw400);
+  font-style: var(--fwStyle);
+  font-size: .7rem;
+  color: var(--lightRed);
 }
 
 @media (max-width: 600px) {

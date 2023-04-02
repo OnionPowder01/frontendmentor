@@ -35,7 +35,7 @@ const AgeCalculatorDisplay = ({ ageData, showAge }) => {
     };
 
     setAge(completeAge)
-    console.log(ageData)
+
   }
   else {
     setAge(false)
@@ -44,9 +44,10 @@ const AgeCalculatorDisplay = ({ ageData, showAge }) => {
 
   useEffect(() => {
       calculateAge();
+      // eslint-disable-next-line
   }, [ageData]);
 
-console.log(showAge);
+
   return (
     <div className="display-age-container">
       <div className="years-container">

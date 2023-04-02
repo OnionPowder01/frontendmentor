@@ -9,19 +9,41 @@ const Input = ({
   placeholder,
   handleEmptyInput,
   showAge,
+  errorName,
+  invalidError,
+  handleInvalidData,
 }) => {
-  const [error, setError] = useState("");
+  const [errorEmpty, setErrorEmpty] = useState("");
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if(showAge){
-      handleEmptyInput(value, setError);
+    if (showAge) {
+      handleEmptyInput(value, setErrorEmpty);
     }
+    // eslint-disable-next-line
   }, [showAge, value]);
 
+  useEffect(() => {
+    handleInvalidData(value, errorName, invalidError);
+    if (invalidError) {
+      setIsError(true);
+    } else {
+      setIsError(false);
+    }
+    // eslint-disable-next-line
+  }, [value, errorName, invalidError]);
+
+  console.log(isError);
 
   return (
-    <div className="input-container">
-      <label className="label">{label}</label>
+    <div
+      className={
+        isError || errorEmpty ? "input-container error" : "input-container"
+      }
+    >
+      <label className={isError || errorEmpty ? "label label-error" : "label"}>
+        {label}
+      </label>
       <input
         type={type}
         name={name}
@@ -29,7 +51,10 @@ const Input = ({
         onChange={handleInputChange}
         placeholder={placeholder}
       />
-      <p>{error}</p>
+      <p className="para-error">{errorEmpty}</p>
+      <p className="para-error">
+        {invalidError ? `${invalidError} ${errorName}` : ""}
+      </p>
     </div>
   );
 };
