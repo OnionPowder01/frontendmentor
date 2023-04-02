@@ -190,7 +190,7 @@ footer {
 .tooltip-container {
   position: absolute;
   bottom: 110%;
-  left: -10%;
+  left: -10%re;
   padding: .4rem .6rem;
   background: var(--darkBrown);
   border-radius: .2rem;
